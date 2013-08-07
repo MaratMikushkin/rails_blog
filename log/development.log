@@ -2492,3 +2492,510 @@ Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 13:06:08 
 
 
 Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 13:06:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20130807140323)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar(255), "body" text, "post_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130807140323"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 10.0.2.2 at 2013-08-07 14:40:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 47ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2013-08-07 14:41:30 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 401ms (Views: 399.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:31 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:32 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:41:34 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 166ms (Views: 146.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2013-08-07 14:41:37 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (31.3ms)
+  Rendered posts/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 183ms (Views: 181.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "post"=>{"title"=>"fh", "text"=>"fgh"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered posts/_form.html.erb (3.9ms)
+  Rendered posts/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 133ms (Views: 128.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:43 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-08-07 14:41:50 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "post"=>{"title"=>"fdgdfgddgd", "text"=>"fgh"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.4ms)[0m  INSERT INTO "posts" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 07 Aug 2013 14:41:50 UTC +00:00], ["text", "fgh"], ["title", "fdgdfgddgd"], ["updated_at", Wed, 07 Aug 2013 14:41:50 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 17ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/posts/9" for 10.0.2.2 at 2013-08-07 14:41:50 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered posts/show.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 231ms (Views: 223.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:41:51 +0000
+
+
+Started GET "/posts/9" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered posts/show.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 200ms (Views: 160.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:05 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:06 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:06 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:42:08 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 113ms (Views: 110.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:09 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:10 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:42:12 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:14 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 100ms (Views: 95.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/posts/3/comments" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "comment"=>{"commenter"=>"marat", "body"=>"rrdgrdg"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  INSERT INTO "comments" ("body", "commenter", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "rrdgrdg"], ["commenter", "marat"], ["created_at", Wed, 07 Aug 2013 14:42:24 UTC +00:00], ["post_id", 3], ["updated_at", Wed, 07 Aug 2013 14:42:24 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 48ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:24 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:42:29 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:33 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (2.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mComment Load (0.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 101ms (Views: 94.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/posts/3/comments" for 10.0.2.2 at 2013-08-07 14:42:41 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "comment"=>{"commenter"=>"sssss", "body"=>"qqqqqqqqqqq"}, "commit"=>"Create Comment", "post_id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "comments" ("body", "commenter", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "qqqqqqqqqqq"], ["commenter", "sssss"], ["created_at", Wed, 07 Aug 2013 14:42:41 UTC +00:00], ["post_id", 3], ["updated_at", Wed, 07 Aug 2013 14:42:41 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 11ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:41 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mComment Load (0.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 93ms (Views: 89.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:42 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:42:45 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 135ms (Views: 133.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:47 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mComment Load (0.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:50 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 106ms (Views: 102.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/3/edit" for 10.0.2.2 at 2013-08-07 14:42:54 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (3.8ms)
+  Rendered posts/edit.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 117ms (Views: 114.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/3" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "id"=>"3"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 106ms (Views: 103.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-07 14:42:59 +0000
