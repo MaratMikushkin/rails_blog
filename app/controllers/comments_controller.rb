@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.create(params[:comment].permit(:commenter, :body))
     redirect_to post_path(@post)
   end
-# 
-#  http_basic_authenticate_with name: "root", password: "123", only: :destroy
+ 
   http_basic_authenticate_with name: "root", password: "123", only: :destroy
 
   def destroy
