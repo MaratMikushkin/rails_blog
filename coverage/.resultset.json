@@ -1,0 +1,165 @@
+{
+  "Unknown Test Framework": {
+    "coverage": {
+      "/vagrant/rails_blog/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/rails_blog/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/test/helpers/posts_helper_test.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/test/helpers/welcome_helper_test.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/vagrant/rails_blog/test/models/comment_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/rails_blog/test/models/post_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/rails_blog/test/controllers/comments_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/rails_blog/test/controllers/posts_controller_test.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/rails_blog/test/controllers/welcome_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1376299036
+  }
+}
