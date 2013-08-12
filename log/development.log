@@ -5155,3 +5155,43 @@ Processing by PostsController#show as HTML
   Rendered comments/_form.html.haml (26.5ms)
   Rendered posts/show.html.haml within layouts/application (171.7ms)
 Completed 200 OK in 319ms (Views: 307.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 183ms (Views: 179.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
