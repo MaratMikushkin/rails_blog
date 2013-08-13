@@ -5195,3 +5195,311 @@ Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 
 
 
 Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-12 13:20:24 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-13 09:38:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.haml within layouts/application (55.0ms)
+Completed 200 OK in 1444ms (Views: 1376.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:25 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:26 +0000
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2013-08-13 09:38:39 +0000
+Processing by PostsController#new as HTML
+Filter chain halted as #<Proc:0x007fd1e84868d8@/home/vagrant/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2013-08-13 09:38:46 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.haml (39.2ms)
+  Rendered posts/new.html.haml within layouts/application (76.1ms)
+Completed 200 OK in 219ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "post"=>{"title"=>"dggd", "text"=>"dffh"}, "commit"=>"Create Post"}
+Filter chain halted as #<Proc:0x007fd1e84868d8@/home/vagrant/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "post"=>{"title"=>"dggd", "text"=>"dffh"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered posts/_form.html.haml (15.7ms)
+  Rendered posts/new.html.haml within layouts/application (36.6ms)
+Completed 200 OK in 205ms (Views: 199.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-13 09:38:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:38:55 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "post"=>{"title"=>"dggddrgd", "text"=>"dffh"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (64.4ms)[0m  INSERT INTO "posts" ("created_at", "text", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 13 Aug 2013 09:39:02 UTC +00:00], ["text", "dffh"], ["title", "dggddrgd"], ["updated_at", Tue, 13 Aug 2013 09:39:02 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/18
+Completed 302 Found in 74ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/posts/18" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36mComment Load (1.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 18]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.haml (24.1ms)
+  Rendered posts/show.html.haml within layouts/application (140.7ms)
+Completed 200 OK in 268ms (Views: 259.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:03 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:03 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:03 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:03 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:03 +0000
+
+
+Started POST "/posts/18/comments" for 10.0.2.2 at 2013-08-13 09:39:10 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4/gNx3mjqlR8Q47hYo++NUNvhLHD+JY59ZmED4nBdbc=", "comment"=>{"commenter"=>"gdg", "body"=>"dgdrh"}, "commit"=>"Create Comment", "post_id"=>"18"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "comments" ("body", "commenter", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["body", "dgdrh"], ["commenter", "gdg"], ["created_at", Tue, 13 Aug 2013 09:39:10 UTC +00:00], ["post_id", 18], ["updated_at", Tue, 13 Aug 2013 09:39:10 UTC +00:00]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/18
+Completed 302 Found in 21ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/posts/18" for 10.0.2.2 at 2013-08-13 09:39:10 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 18]]
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 18]]
+  Rendered comments/_comment.html.haml (20.1ms)
+  Rendered comments/_form.html.haml (5.0ms)
+  Rendered posts/show.html.haml within layouts/application (63.9ms)
+Completed 200 OK in 185ms (Views: 178.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-08-13 09:39:12 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-08-13 09:39:15 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 144ms (Views: 141.2ms | ActiveRecord: 1.1ms)
