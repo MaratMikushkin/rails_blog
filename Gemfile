@@ -43,8 +43,9 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'coveralls', require: false
+#
+gem 'haml'
+gem 'html2haml'
 gem 'haml-rails'
-gem 'simple_form'
 gem 'twitter-bootstrap-rails'
+gem 'simple_form'

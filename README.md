@@ -1,2 +1,4 @@
-rails_blog
-==========
+simple_blog
+===========
+
+simple rails blog

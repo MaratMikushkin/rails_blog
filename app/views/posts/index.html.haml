@@ -1,17 +1,23 @@
-%h1 Listing Posts
-= link_to 'New post', new_post_path
-%table
-  %tr
-    %th Title
-    %th Text
-    %th
-    %th
-    %th
-  - @posts.each do |post|
+- model_class = Post
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
     %tr
-      %td= post.title
-      %td= post.text
-      %td= link_to 'Show', post_path(post)
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post_path(post),                 |
-          method: :delete, data: { confirm: 'Are you sure?' } |
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:title)
+      %th= model_class.human_attribute_name(:text)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions'
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= link_to post.id, post_path(post)
+        %td= post.title
+        %td= post.text
+        %td=l post.created_at, format: "%Y.%m.%d at %k:%M:%S"
+        %td
+          = link_to t('.edit'), edit_post_path(post), :class => 'btn btn-mini'
+          = link_to t('.destroy'), post_path(post), :method => :delete, :data => { :confirm => t('.confirm', :default => 'Are you sure?') }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new'), new_post_path, :class => 'btn btn-primary'

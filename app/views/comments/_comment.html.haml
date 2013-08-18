@@ -1,10 +1,18 @@
-%p
-  %strong Commenter:
-  = comment.commenter
-%p
-  %strong Comment:
-  = comment.body
-%p
-  = link_to 'Destroy Comment', [comment.post, comment], |
-    method: :delete,                                    |
-    data: { confirm: 'Are you sure?' }                  |
+- if @post.comments.any?
+  %table.table.table-striped
+    %thead
+      %tr
+        %th= :commenter #model_class.human_attribute_name(:commenter)
+        %th= :body #model_class.human_attribute_name(:body)
+        %th= :created_at #model_class.human_attribute_name(:created_at)
+        %th=t '.actions'
+    %tbody
+      - @post.comments.each do |comment|
+        %tr
+          %td= comment.commenter
+          %td= comment.body
+          %td=l comment.created_at, format: "%Y.%m.%d at %k:%M:%S"
+          %td
+            = link_to t('.destroy'), post_comment_path(@post, comment), :method => :delete, :data => { :confirm => t('.confirm', :default => 'Are you sure?') }, :class => 'btn btn-mini btn-danger'
+- else
+  %p no comments

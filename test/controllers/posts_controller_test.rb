@@ -1,8 +1,6 @@
 class PostsControllerTest < ActionController::TestCase
-  # called before every single test
   setup :initialize_post
  
-  # called after every single test
   def teardown
     @post = nil
   end
