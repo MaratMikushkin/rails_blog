@@ -3,7 +3,9 @@
 one:
   title: MyString
   text: MyText
+  state: published
 
 two:
   title: MyString
   text: MyText
+  state: unpublished
