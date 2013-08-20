@@ -3,11 +3,11 @@ class PostsController < ApplicationController
       except: [:index, :show]
 
   def new
-    @post = Post.new
+    @post = PostType.new
   end
 
   def create
-    @post = Post.new(params[:post].permit(:title, :text))
+    @post = PostType.new(params[:post].permit(:title, :text))
     
     if @post.save
       redirect_to @post
@@ -17,19 +17,19 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = PostType.find(params[:id])
   end
   
   def index
-    @posts = Post.all
+    @posts = PostType.all
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = PostType.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = PostType.find(params[:id])
  
     if @post.update(params[:post].permit(:title, :text, :state_event))
       redirect_to @post
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = PostType.find(params[:id])
     @post.destroy
  
     redirect_to posts_path

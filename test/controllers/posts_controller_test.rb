@@ -34,7 +34,6 @@ class PostsControllerTest < ActionController::TestCase
   end
  
   test "should update post" do
-    attrs = { title: 'Update title', state_event: 'publish' }
     patch :update, id: @post.id, post: {}
     assert_redirected_to post_path(assigns(:post))
   end
